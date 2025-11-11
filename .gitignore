@@ -1,13 +1,26 @@
+# Python
 __pycache__/
-*.py[cod]
-*$py.class
-.Python
+*.pyc
+*.pyo
+*.pyd
+.venv/
 venv/
-build/
+.env
+.env.*
+
+# Node / frontend (if any)
+node_modules/
 dist/
-.pytest_cache/
-.coverage
+build/
+
+# IDE/Editor
 .vscode/
 .idea/
-.env
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Docker
+**/data/**
+**/tmp/**
