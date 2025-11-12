@@ -37,3 +37,4 @@ pytest tests/ -v --cov=app
 2. Create REST API routes
 3. Set up WebSocket handlers
 4. Train LSTM model
+"# Smart-energy-Monitoring" 
