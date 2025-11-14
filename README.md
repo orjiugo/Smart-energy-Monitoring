@@ -1,40 +1,63 @@
-# Smart Energy Monitoring Backend
+## 🌍 Project Overview  
+This project is part of my MSc in *Applied Computing and IT with Project Management* at the **University of Bedfordshire**.  
+The goal is to design and implement an **IoT-based smart energy monitoring system** that:  
+- Collects simulated energy usage data from multiple sensors.  
+- Stores and processes data efficiently using a time-series database.  
+- Predicts future energy consumption using a trained **LSTM deep learning model**.  
+- Provides RESTful APIs to deliver real-time and predictive insights to a web dashboard (ReactJS frontend).  
 
-IoT-Enabled Smart Energy Monitoring System with Real-Time Analytics and AI-Powered Predictions.
+---
 
-## Quick Start
+## ⚙️ Tech Stack  
+| Layer | Technology |
+|-------|-------------|
+| **Backend Framework** | FastAPI (Python) |
+| **Database** | PostgreSQL + TimescaleDB |
+| **Cache / Queue** | Redis |
+| **Machine Learning** | TensorFlow, Pandas, NumPy, Scikit-learn |
+| **Containerization** | Docker, Docker Compose |
+| **Frontend** | ReactJS *(under development)* |
+| **Version Control** | Git + GitHub |
 
-### Prerequisites
-- Docker & Docker Compose
-- Python 3.11+ (for local development)
+---
 
-### Setup
+## 🧩 Project Architecture  
 
-1. Extract the ZIP file
-2. Create environment file: `cp .env.example .env`
-3. Start services: `docker-compose up`
-4. Access API at http://localhost:8000/docs
+backend/
+├── app/
+│ ├── api/ # FastAPI routes and endpoints
+│ ├── services/ # Business logic and ML integrations
+│ ├── db/ # Database models and connections
+│ ├── core/ # Schemas and custom exceptions
+│ └── main.py # FastAPI app entry point
+├── ml/
+│ ├── training/ # LSTM model training scripts
+│ ├── models/ # Saved ML models and scalers
+│ └── reports/ # Training metrics and logs
+├── docker/
+│ ├── Dockerfile
+│ ├── Dockerfile.dev
+│ └── docker-compose.yml
+└── tests/
+└── unit/ and integration tests
 
-## Project Structure
+yaml
+Copy code
 
-- `app/` - FastAPI application
-- `ml/` - Machine learning models
-- `tests/` - Test suite (pytest)
-- `docker/` - Docker configuration
+---
 
-## Development
+## 🚀 Features  
+✔️ Real-time energy data simulation and storage  
+✔️ RESTful API endpoints for data access  
+✔️ Predictive analytics using LSTM  
+✔️ Dockerized services for easy deployment  
+✔️ Structured logging and environment-based configuration  
 
+---
+
+## 🔧 How to Run Locally  
+
+### 1️⃣ Clone the repository
 ```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements-dev.txt
-pytest tests/ -v --cov=app
-```
-
-## Next Steps
-
-1. Implement data generator
-2. Create REST API routes
-3. Set up WebSocket handlers
-4. Train LSTM model
-"# Smart-energy-Monitoring" 
+git clone https://github.com/orjiugo/Smart-energy-Monitoring.git
+cd Smart-energy-Monitoring
